@@ -29,9 +29,19 @@
 					</div>
 					<div class="col-sm-3 col-lg-3">
 						<div class="widget">
-							<h4>Pages</h4>
+							<h4>Quan ly</h4>
 							<ul class="link-list">
-								<li><a href="#">Press release</a></li>
+                                <?php 
+                                  if(isset($_SESSION['name']))
+                                  { 
+                                      ?>
+                                        <li><a href="logout.php"><i><?php echo $_SESSION['name'];?></i>&nbsp;&nbsp;|&nbsp;&nbsp;Đăng xuất</a></li>
+                                <?php
+                                  }
+                                else{
+                                    ?>
+                                <li><a href="login.php">Đăng nhập</a></li>
+								<?php } ?>
 								<li><a href="#">Terms and conditions</a></li>
 								<li><a href="#">Privacy policy</a></li>
 								<li><a href="#">Career center</a></li>

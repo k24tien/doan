@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php include 'functions.php'?>
 <?php include 'breadcrumb.php'; ?>	
 		<section id="content">
 			<div class="container">
@@ -24,32 +25,10 @@
 							  </tr>
 							</thead>
 							<tbody>
-							  <tr>
-								<td>1</td>
-								<td>Bến Ninh Kiều</td>
-								<td>Admin</td>
-								<td>12/12/2017</td>
-								<td>Địa danh</td>
-								<td>Cần Thơ</td>
-								<td>100</td>
-								<td>4</td>
-								<td class="text-centered"><i class="fa fa-pencil-square-o"></i></td>
-								<td class="text-centered"><i class="fa fa-times"></i></td>
-								
-							  </tr>
-							  <tr>
-								<td>2</td>
-								<td>Bến Ninh Kiều</td>
-								<td>Admin</td>
-								<td>12/12/2017</td>
-								<td>Địa danh</td>
-								<td>Cần Thơ</td>
-								<td>100</td>
-								<td>4</td>
-								<td class="text-centered"><i class="fa fa-pencil-square-o"></i></td>
-								<td class="text-centered"><i class="fa fa-times"></i></td>
-								
-							  </tr>
+                                <?php
+                                $collection = $db->post;
+                                showAllPost($collection);
+                                ?>
 							</tbody>
 						  </table>
 						</div>

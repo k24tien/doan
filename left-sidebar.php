@@ -10,8 +10,8 @@
 		<div class="widget">
 			<h5 class="widgetheading">Chuyên mục</h5>
 			<ul class="cat">
-				<li><i class="fa fa-angle-right"></i><a href="#">Chuyên mục mới</a><span> (20)</span></li>
-				<li><i class="fa fa-angle-right"></i><a href="#">Tất cả chuyên mục</a><span> (11)</span></li>
+				<li><i class="fa fa-angle-right"></i><a href="newcategory.php">Chuyên mục mới</a><span> (20)</span></li>
+				<li><i class="fa fa-angle-right"></i><a href="allcategory.php">Tất cả chuyên mục</a><span> (11)</span></li>
 			</ul>
 		</div>
 		
