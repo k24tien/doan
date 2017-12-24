@@ -1,11 +1,4 @@
 <?php include 'header.php'; ?>
-<?php 
-    
-    if(!isset($_SESSION['name'])) 
-           {
-               header("Location:index.php");  
-           }
-?>
 <?php include 'functions.php'?>
 <?php include 'breadcrumb.php'; ?>	
 		<section id="content">
@@ -60,23 +53,28 @@
                             $content = $_POST["content"];
                             $des = $_POST["des"];
                             $catname = $_POST["category"];
+                            //$target_dir = "uploads/";
+                            //$target_file = $target_dir . basename($_FILES["post_image"]["name"]);
                             //echo $_FILES["post_image"]["name"];
                             //echo $_FILES['post_image']['error'];
                             //$target_dir = "uploads/";
                             //$target_file = $target_dir . basename($_FILES["post_image"]["name"]);
                             
                             
-                            $fileName = $_FILES['post_image']['name'];
-                            $fileType = $_FILES['post_image']['type'];
-                            $fileContent = file_get_contents($_FILES['post_image']['tmp_name']);
+                            //$fileName = $_FILES['post_image']['name'];
+                            //$fileType = $_FILES['post_image']['type'];
+                            //$fileContent = file_get_contents($_FILES['post_image']['name']);
+                            
                             //echo $fileType."--- ten file";
                             //$image = new MongoBinData($fileContent, MongoBinData::GENERIC);
                             //echo $fileName;
-                            //$document = array( "title" => $title, "content" => $content, "des" => $des, "category" => $catname, "created_date" => new MongoDate(), "author" => "Administrator", "place" => "Can Tho", "post_image" => $image);
+                            $filename = $_FILES["post_image"]["tmp_name"];
+                            $collection = $db->post;
+                            $document = array( "title" => $title, "content" => $content, "des" => $des, "category" => $catname, "created_date" => new MongoDate(), "author" => "Administrator", "place" => "Can Tho", "post_image" => new MongoBinData(file_get_contents($filename)));
                             
-                            //$collection->insert($document);
-                            //echo ' <div class="alert alert-success">';
-                            //echo '<strong>Success!</strong> Create new post successfully!';
+                            $collection->insert($document);
+                            echo ' <div class="alert alert-success">';
+                            echo '<strong>Success!</strong> Create new post successfully!';
                         }
                         
                         ?>

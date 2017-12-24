@@ -26,8 +26,6 @@ function checkLogin($conn,$user,$pwd){
     //print_r($fQuery);
     
     if($queryDbFind){
-		$_SESSION['name'] = $queryDbFind["name"];
-         //echo  $_SESSION['name'] ;
         header('Location: newpost.php');
     }
     else
@@ -69,7 +67,7 @@ function showAllPost($conn){
         echo "<td>".$count."</td>";
         echo "<td>".$document['title']."</td>";
         echo "<td>".$document['author']."</td>";
-        echo "<td>".date('d/M/Y', $document['created_date']->sec)."</td>";
+        echo "<td>".date('d/m/Y', $document['created_date']->sec)."</td>";
         echo "<td>".$document['category']."</td>";
         echo "<td>".$document['place']."</td>";
         echo "<td>10</td>";
@@ -78,5 +76,15 @@ function showAllPost($conn){
         echo '<td class="text-centered"><i class="fa fa-times"></i></td></td>';
         echo "</tr>";
     }
+}
+function loadImage($img,$class){
+    $imagebody = $img->bin;
+    $base64   = base64_encode($imagebody);
+    echo '<img src="data:png;base64,'.$base64.'" class="img-responsive '.$class.'" />';
+}
+function loadImageThumbnail($img){
+    $imagebody = $img->bin;
+    $base64   = base64_encode($imagebody);
+    echo '<img src="data:png;base64,'.$base64.'" class="img-responsive pull-left" width="65px" height="65px" />';
 }
 ?>

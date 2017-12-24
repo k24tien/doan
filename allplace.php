@@ -11,18 +11,28 @@
 						  <table class="table table-bordered table-hover">
 							<thead>
 							  <tr>
-								<th>#</th>
-								<th>Category Name</th>
-								<th>Descriptions</th>
-								<th>Number Posts</th>
+								<th>Tinh thanh pho</th>
+								<th>Quan huyen</th>
+								<th>Xa phuong</th>
 								<!--<th>Tùy chọn</th>
 								<th>Tùy chọn</th> -->
 							  </tr>
 							</thead>
 							<tbody>
                             <?php 
-                                $collection = $db->category;
-                                showCategory($collection);
+                                $collection = $db->place;
+                                $cursor = $collection->find();
+                                foreach ($cursor as $document) {
+                                    echo "<tr>";
+                                    foreach($document as $key => $val) {
+                                        if($key != "_id"){
+                                        echo "<td>".$val."</td>";
+                                        }
+                                    }
+                                    echo "<td></td>";
+                                    echo "<td></td>";
+                                    echo "</tr>";
+                                }
                                 
                            
                                 

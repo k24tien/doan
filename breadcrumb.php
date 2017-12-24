@@ -4,7 +4,7 @@
 					<div class="col-lg-12">
 						<ul class="breadcrumb">
 							<li><a href="#"><i class="fa fa-home"></i></a></li>
-							<li class="active">Single post</li>
+							<li class="active">...</li>
 						</ul>
 					</div>
 				</div>

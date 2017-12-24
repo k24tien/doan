@@ -1,33 +1,29 @@
 <footer>
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-3 col-lg-3">
+					<div class="col-sm-4 col-lg-4">
 						<div class="widget">
-							<h4>Get in touch with us</h4>
-							<address>
-					<strong>Sailor company Inc</strong><br>
-					 Sailor suite room V124, DB 91<br>
-					 Someplace 71745 Earth </address>
-							<p>
-								<i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
-								<i class="icon-envelope-alt"></i> email@domainname.com
-							</p>
+							<h4>Nhom thuc hien</h4>
+                                Tran Van Tien<br />
+                                Nguyen Tan Phu<br />
+                                Nguyen Hoang Minh<br />
+                                Nguyen Thanh Tai<br />
+                                Tran Van Ut Chinh<br />
+                                Le Van Tay<br />
 						</div>
 					</div>
-					<div class="col-sm-3 col-lg-3">
+					<div class="col-sm-4 col-lg-4">
 						<div class="widget">
-							<h4>Information</h4>
+							<h4>Truy cap nhanh</h4>
 							<ul class="link-list">
-								<li><a href="#">Press release</a></li>
-								<li><a href="#">Terms and conditions</a></li>
-								<li><a href="#">Privacy policy</a></li>
-								<li><a href="#">Career center</a></li>
-								<li><a href="#">Contact us</a></li>
+								<li><a href="#">Tim kiem nang cao</a></li>
+								<li><a href="#">Dia diem du lich</a></li>
+								<li><a href="#">Lien he chung toi</a></li>
 							</ul>
 						</div>
 
 					</div>
-					<div class="col-sm-3 col-lg-3">
+					<div class="col-sm-4 col-lg-4">
 						<div class="widget">
 							<h4>Quan ly</h4>
 							<ul class="link-list">
@@ -41,24 +37,19 @@
                                 else{
                                     ?>
                                 <li><a href="login.php">Đăng nhập</a></li>
+								<?php } ?><?php 
+                                  if(isset($_SESSION['name']))
+                                  { 
+                                      ?>
+                                        <li><a href="logout.php"><i><?php echo $_SESSION['name'];?></i>&nbsp;&nbsp;|&nbsp;&nbsp;Đăng xuất</a></li>
+                                <?php
+                                  }
+                                else{
+                                    ?>
+                                <li><a href="login.php">Đăng nhập</a></li>
 								<?php } ?>
-								<li><a href="#">Terms and conditions</a></li>
-								<li><a href="#">Privacy policy</a></li>
-								<li><a href="#">Career center</a></li>
-								<li><a href="#">Contact us</a></li>
+								<!--<li><a href="login.php">Dang nhap</a></li>-->
 							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-lg-3">
-						<div class="widget">
-							<h4>Newsletter</h4>
-							<p>Fill your email and sign up for monthly newsletter to keep updated</p>
-							<div class="form-group multiple-form-group input-group">
-								<input type="email" name="email" class="form-control">
-								<span class="input-group-btn">
-                            <button type="button" class="btn btn-theme btn-add">Subscribe</button>
-                        </span>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -67,27 +58,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
-							<div class="copyright">
-								<p>&copy; Sailor Theme - All Right Reserved</p>
-								<div class="credits">
-									<!--
-                    All the links in the footer should remain intact. 
-                    You can delete the links only if you purchased the pro version.
-                    Licensing information: https://bootstrapmade.com/license/
-                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Sailor
-                  -->
-									<a href="https://bootstrapmade.com/bootstrap-business-templates/">Bootstrap Business Templates</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-								</div>
-							</div>
+							<p class="text-left"><strong>Mon Phat trien phan mem nguon mo - 2017</strong></p>
 						</div>
 						<div class="col-lg-6">
-							<ul class="social-network">
-								<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
+							<p class="text-right"><strong>Giang vien huong dan: Do Thanh Nghi</strong></p>
 						</div>
 					</div>
 				</div>

@@ -4,10 +4,9 @@
 						<ul class="nav navbar-nav">
 							
 							<li><a href="index.php">Trang chủ</a></li>
-							<li><a href="aboutus.php">Giới thiệu</a></li>
-							<li><a href="portfolio.php">Địa danh</a></li>
-							<li><a href="contact.php">Liên hệ</a></li>
-							<li><a href="login.php">Đăng nhập</a></li>
+							<li><a href="#">Giới thiệu</a></li>
+							<li><a href="#">Địa danh</a></li>
+							<li><a href="#">Liên hệ</a></li>
 						</ul>
 					</div>
 				</div>
