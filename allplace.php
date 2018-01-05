@@ -11,9 +11,8 @@
 						  <table class="table table-bordered table-hover">
 							<thead>
 							  <tr>
-								<th>Tinh thanh pho</th>
-								<th>Quan huyen</th>
-								<th>Xa phuong</th>
+								<th>Tỉnh / TP</th>
+								<th>Quận huyện</th>
 								<!--<th>Tùy chọn</th>
 								<th>Tùy chọn</th> -->
 							  </tr>
@@ -29,8 +28,6 @@
                                         echo "<td>".$val."</td>";
                                         }
                                     }
-                                    echo "<td></td>";
-                                    echo "<td></td>";
                                     echo "</tr>";
                                 }
                                 

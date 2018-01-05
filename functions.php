@@ -63,7 +63,7 @@ function showAllPost($conn){
     $count = 0;
     foreach ($cursor as $document) {
         $count = $count + 1;
-        echo "<tr>";
+        echo "<tr id=".$document['_id'].">";
         echo "<td>".$count."</td>";
         echo "<td>".$document['title']."</td>";
         echo "<td>".$document['author']."</td>";
@@ -72,8 +72,8 @@ function showAllPost($conn){
         echo "<td>".$document['place']."</td>";
         echo "<td>10</td>";
         echo "<td>10</td>";
-        echo '<td class="text-centered"><i class="fa fa-pencil-square-o"></i></td>';
-        echo '<td class="text-centered"><i class="fa fa-times"></i></td></td>';
+        echo '<td class="text-centered"><a href="deletepost.php?id='.$document['_id'].'" ><i class="fa fa-pencil-square-o"></i></a></td>';
+        echo '<td class="text-centered"><a href="deletepost.php?id='.$document['_id'].'" ><i class="fa fa-times"></i></a></td></td>';
         echo "</tr>";
     }
 }

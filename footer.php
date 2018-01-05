@@ -3,41 +3,31 @@
 				<div class="row">
 					<div class="col-sm-4 col-lg-4">
 						<div class="widget">
-							<h4>Nhom thuc hien</h4>
-                                Tran Van Tien<br />
-                                Nguyen Tan Phu<br />
-                                Nguyen Hoang Minh<br />
-                                Nguyen Thanh Tai<br />
-                                Tran Van Ut Chinh<br />
-                                Le Van Tay<br />
+							<h4>Nhóm thực hiện</h4>
+                                Trần Văn Tiên<br />
+                                Nguyễn Tấn Phú<br />
+                                Nguyễn Hoàng Minh<br />
+                                Nguyễn Thanh Tài<br />
+                                Trần Văn Út Chính<br />
+                                Lê Văn Tây<br />
 						</div>
 					</div>
 					<div class="col-sm-4 col-lg-4">
 						<div class="widget">
-							<h4>Truy cap nhanh</h4>
+							<h4>Truy cập nhanh</h4>
 							<ul class="link-list">
-								<li><a href="#">Tim kiem nang cao</a></li>
-								<li><a href="#">Dia diem du lich</a></li>
-								<li><a href="#">Lien he chung toi</a></li>
+								<li><a href="#">Tìm kiếm nâng cao</a></li>
+								<li><a href="#">Địa điểm du lịch</a></li>
+								<li><a href="#">Liên hệ chúng tôi</a></li>
 							</ul>
 						</div>
 
 					</div>
 					<div class="col-sm-4 col-lg-4">
 						<div class="widget">
-							<h4>Quan ly</h4>
+							<h4>Quản lý</h4>
 							<ul class="link-list">
                                 <?php 
-                                  if(isset($_SESSION['name']))
-                                  { 
-                                      ?>
-                                        <li><a href="logout.php"><i><?php echo $_SESSION['name'];?></i>&nbsp;&nbsp;|&nbsp;&nbsp;Đăng xuất</a></li>
-                                <?php
-                                  }
-                                else{
-                                    ?>
-                                <li><a href="login.php">Đăng nhập</a></li>
-								<?php } ?><?php 
                                   if(isset($_SESSION['name']))
                                   { 
                                       ?>
@@ -58,10 +48,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
-							<p class="text-left"><strong>Mon Phat trien phan mem nguon mo - 2017</strong></p>
+							<p class="text-left"><strong>Môn Phát triển phần mềm nguồn mở - 2017</strong></p>
 						</div>
 						<div class="col-lg-6">
-							<p class="text-right"><strong>Giang vien huong dan: Do Thanh Nghi</strong></p>
+							<p class="text-right"><strong>Giảng viên hướng dẫn: Đỗ Thanh Nghị</strong></p>
 						</div>
 					</div>
 				</div>
@@ -86,6 +76,7 @@
 	<script src="js/animate.js"></script>
 	<script src="js/summernote.js"></script>
     <script src="js/fileinput.js"></script>
+    <script src="js/bootstrap-tagsinput.js"></script>
 	<script src="js/custom.js"></script>
 
 </body>

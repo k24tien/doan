@@ -29,7 +29,7 @@
 							</div>
                             <div class="form-group">
                                 
-                                <label class="control-label">Category</label>
+                                <label class="control-label">Chuyên mục</label>
                                     
                                      <?php 
                                         $coll = $db->category;
@@ -38,7 +38,7 @@
                                         ?>  
                             </div>
 							<div class="form-group">
-                                <label class="control-label">Hinh dai dien</label>
+                                <label class="control-label">Hình đại diện</label>
                                 <!--<input id="input-b5" name="post_image" type="file">-->
                                 <input id="input-2" name="post_image" type="file">
                             </div>

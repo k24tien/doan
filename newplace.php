@@ -8,36 +8,38 @@
 				
 
 					<div class="col-lg-9">
-						<h3>Add new place</h3>
+						<h3>Thêm địa điểm mới</h3>
 						<form action="" method="post" role="form" class="contactForm">
 							<div class="form-group">
-								<input type="text" name="tinhtp" class="form-control" id="name" placeholder="Tinh/ Thanh pho" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+								<input type="text" name="tinhtp" class="form-control" id="name" placeholder="Tỉnh / Thành phố" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
 								<div class="validation"></div>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="descript" placeholder="Quan huyen" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+								<input type="text" name="quanhuyen" class="form-control" id="tagsinput" placeholder="Quận huyện" data-rule="minlen:4" data-role="tagsinput" />
+								
 								<div class="validation"></div>
 							</div>
 							
 
-							<div class="text-center"><button type="submit" class="btn btn-theme btn-block btn-md" name="submit">Add new</button></div>
+							<div class="text-center"><button type="submit" class="btn btn-theme btn-block btn-md" name="submit">Thêm mới</button></div>
 						</form>
                         <?php 
                         if(isset($_POST["submit"])){
                             $tinhtp = $_POST["tinhtp"];
+                            $quanhuyen = $_POST["quanhuyen"];
                             //$des = $_POST["descript"];
                             $collection = $db->place;
                             $fQuery = array('tinhtp' => $tinhtp);
                             $queryDbFind = $collection->findOne($fQuery);
                             if(empty($queryDbFind)){
-                                $document = array( "tinhtp" => $tinhtp);
+                                $document = array( "tinhtp" => $tinhtp,"quanhuyen" => $quanhuyen);
                                 $collection->insert($document);
                                 echo ' <div class="alert alert-success">';
-                                echo '<strong>Success!</strong> Create new place <strong>'.$tinhtp.'</strong> successfully!';
+                                echo 'Thêm địa điểm mới thành công!';
                             }
                             else{
                                 echo ' <div class="alert alert-danger">';
-                                echo '<strong>Failed!</strong> Place <strong>'.$tinhtp.'</strong> existed!';
+                                echo 'Có lỗi xảy ra. Địa điểm đã tồn tại!';
                             }
                         }
                         
