@@ -398,12 +398,12 @@ header .nav .caret {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  background-color: #fff;
+  background-color: #65AAF0;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color:  #fff;
+  background-color:  #65AAF0;
 }	
 	
 
@@ -411,6 +411,7 @@ header .nav .caret {
     box-shadow: none;
     border-radius: 0;
 	border: 1px solid #eee;
+	background-color: #65AAF0;
 }
 
 header .navbar-nav > li > ul > li {
@@ -432,8 +433,9 @@ header .nav li .dropdown-menu  {
 }
 
 header .nav li .dropdown-menu li a {
-   line-height: 30px;
+   line-height: 40px;
    padding: 3px 12px;
+   font-size: 12pt;
 }
 
 /* --- menu --- */
@@ -473,11 +475,11 @@ header ul.nav li ul li a {
 .dropdown-submenu:hover > a, 
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
-	background: #f5f5f5;
+	background-color: #4094e8;
 }
-.navbar .nav a:hover {
+.navbar .nav a:hover Ơ
 	background:none;
-}
+Ư
 
 .navbar .nav > .active > a,.navbar .nav > .active > a:hover {
 	background:none;

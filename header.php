@@ -18,6 +18,8 @@ session_start();
 	<link rel="stylesheet" href="css/summernote.css">
     <!-- include File Input -->
     <link rel="stylesheet" href="css/fileinput.css">
+    <!-- include File Input -->
+    <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
 	<!-- Theme skin -->
 	<link id="t-colors" href="skins/default.css" rel="stylesheet" />
 

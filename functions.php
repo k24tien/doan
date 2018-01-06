@@ -29,7 +29,7 @@ function checkLogin($conn,$user,$pwd){
         header('Location: newpost.php');
     }
     else
-        echo "Wrong user or password!";
+        echo "Sai tên đăng nhập hoặc mật khẩu!";
 }
 function showCategory($conn){
     $cursor = $conn->find();
@@ -38,12 +38,10 @@ function showCategory($conn){
         $count = $count + 1;
         echo "<tr>";
         echo "<td>".$count."</td>";
-        foreach($document as $key => $val) {
-            if($key != "_id"){
-            echo "<td>".$val."</td>";
-            }
-        }
-        echo "<td></td>";
+        echo "<td>".$document["catname"]."</td>";
+        echo "<td>".$document["des"]."</td>";
+        echo '<td class="text-centered"><a href="editcategory.php?id='.$document['_id'].'" ><i class="fa fa-pencil-square-o"></i></a></td>';
+        echo '<td class="text-centered"><a href="deletecategory.php?id='.$document['_id'].'" ><i class="fa fa-times"></i></a></td></td>';
         echo "</tr>";
     }
 }
@@ -59,11 +57,11 @@ function showCategoryinSelectbox($conn){
     echo '</select>';
 }
 function showAllPost($conn){
-    $cursor = $conn->find();
+    $cursor = $conn->find()->sort(array('created_date'=>-1));
     $count = 0;
     foreach ($cursor as $document) {
         $count = $count + 1;
-        echo "<tr>";
+        echo "<tr id=".$document['_id'].">";
         echo "<td>".$count."</td>";
         echo "<td>".$document['title']."</td>";
         echo "<td>".$document['author']."</td>";
@@ -72,8 +70,8 @@ function showAllPost($conn){
         echo "<td>".$document['place']."</td>";
         echo "<td>10</td>";
         echo "<td>10</td>";
-        echo '<td class="text-centered"><i class="fa fa-pencil-square-o"></i></td>';
-        echo '<td class="text-centered"><i class="fa fa-times"></i></td></td>';
+        echo '<td class="text-centered"><a href="editpost.php?id='.$document['_id'].'" ><i class="fa fa-pencil-square-o"></i></a></td>';
+        echo '<td class="text-centered"><a href="deletepost.php?id='.$document['_id'].'" ><i class="fa fa-times"></i></a></td></td>';
         echo "</tr>";
     }
 }

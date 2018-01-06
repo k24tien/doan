@@ -11,9 +11,10 @@
 						  <table class="table table-bordered table-hover">
 							<thead>
 							  <tr>
-								<th>Tinh thanh pho</th>
-								<th>Quan huyen</th>
-								<th>Xa phuong</th>
+								<th>Tỉnh / TP</th>
+								<th>Quận huyện</th>
+								<th>Chỉnh sửa</th>
+								<th>Xóa</th>
 								<!--<th>Tùy chọn</th>
 								<th>Tùy chọn</th> -->
 							  </tr>
@@ -24,13 +25,10 @@
                                 $cursor = $collection->find();
                                 foreach ($cursor as $document) {
                                     echo "<tr>";
-                                    foreach($document as $key => $val) {
-                                        if($key != "_id"){
-                                        echo "<td>".$val."</td>";
-                                        }
-                                    }
-                                    echo "<td></td>";
-                                    echo "<td></td>";
+                                    echo "<td>".$document["tinhtp"]."</td>";
+                                    echo "<td>".implode(", ",$document["quanhuyen"])."</td>";
+                                    echo '<td class="text-centered"><a href="editplace.php?id='.$document['_id'].'" ><i class="fa fa-pencil-square-o"></i></a></td>';
+        							echo '<td class="text-centered"><a href="deleteplace.php?id='.$document['_id'].'" ><i class="fa fa-times"></i></a></td></td>';	
                                     echo "</tr>";
                                 }
                                 

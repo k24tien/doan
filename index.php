@@ -51,30 +51,21 @@
 			
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 col-sm-6 col-xs-12">
-						<a href="#">
-							 <img src="img/works/bennk.jpg" class="thumbnail img-responsive">
-							 <div class="caption">
-							  <p>Bến Ninh Kiều...</p>
-							</div>
-						</a>
-					</div>
-					 <div class="col-lg-4 col-sm-6 col-xs-12">
-						<a href="#">
-							 <img src="img/works/bennk.jpg" class="thumbnail img-responsive">
-							 <div class="caption">
-							  <p>Chợ nổi Cái Răng</p>
-							</div>
-						</a>
-					</div>
-					 <div class="col-lg-4 col-sm-6 col-xs-12">
-						<a href="#">
-							 <img src="img/works/bennk.jpg" class="thumbnail img-responsive">
-							<div class="caption">
-							  <p>Lung Cột Cầu</p>
-							</div>
-						</a>
-					</div>
+                    <?php 
+                    $collection = $db->post;
+                    $cursor = $collection->find()->sort(array('created_date'=>-1))->limit(6);
+                    foreach ($cursor as $document) {
+                    //print_r($document);
+                    echo '<div class="col-lg-4 col-sm-6 col-xs-12">';
+                    echo '<a href="post-rightsidebar.php?id='.$document['_id'].'">';
+                    $img = $document["post_image"];
+                    loadImage($img,"thumbnail"); 
+                    echo '<div class="caption">';
+                    echo '<p>'.$document['title'].'</p>';
+                    echo '</div></a>'; 
+                    echo '</div>';    
+                    }
+                    ?>
 				</div>
 			</div>
 			<!-- divider -->

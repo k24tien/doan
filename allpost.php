@@ -20,8 +20,8 @@
 								<th>Địa điểm</th>
 								<th>Lượt xem</th>
 								<th>Bình luận</th>
-								<th>Tùy chọn</th>
-								<th>Tùy chọn</th>
+								<th>Chỉnh sửa</th>
+								<th>Xóa</th>
 							  </tr>
 							</thead>
 							<tbody>
@@ -50,4 +50,5 @@
 				</div>
 			</div>
 		</section>
+
 <?php include 'footer.php'; ?>		

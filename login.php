@@ -10,10 +10,10 @@
 							<h2 class="text-center">Đăng nhập</h2>
 
 							<div class="form-group">
-								<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Username" tabindex="4">
+								<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Tên đăng nhập" tabindex="4">
 							</div>
 							<div class="form-group">
-								<input type="password" name="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password">
+								<input type="password" name="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Mật khẩu">
 							</div>
 							<!--<div class="form-group">
 							code captcha: https://freetuts.net/viet-thu-vien-captcha-va-kiem-tra-ma-captcha-bang-ajax-137.html -->	
@@ -25,7 +25,7 @@
 									
 							</div> -->
 							<div class="row">
-								<div class="col-xs-12 col-md-6 col-md-offset-3"><input type="submit" name="submit" value="Sign in" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+								<div class="col-xs-12 col-md-6 col-md-offset-3"><input type="submit" name="submit" value="Đăng nhập" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
 								
 							</div>
 						</form>

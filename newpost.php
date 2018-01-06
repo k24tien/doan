@@ -29,7 +29,7 @@
 							</div>
                             <div class="form-group">
                                 
-                                <label class="control-label">Category</label>
+                                <label class="control-label">Chuyên mục</label>
                                     
                                      <?php 
                                         $coll = $db->category;
@@ -37,10 +37,27 @@
 
                                         ?>  
                             </div>
+                            <div class="form-group">
+                                <label class="control-label">Địa điểm</label>
+                                <select name="tinhtp" class="form-control">
+                                    <?php
+                                    $coll1 = $db->place;
+                                    $cursor1 = $coll1->find();
+                                    foreach ($cursor1 as $document1) {
+                                        echo '<option value="'.$document1['tinhtp'].'">'.$document1['tinhtp'].'</option>';
+
+                                    }
+                                    
+                                    ?>
+                                </select>
+                            </div>
 							<div class="form-group">
-                                <label class="control-label">Hinh dai dien</label>
+                                <label class="control-label">Hình đại diện</label>
                                 <!--<input id="input-b5" name="post_image" type="file">-->
                                 <input id="input-2" name="post_image" type="file">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="tags" class="form-control" id="tagsinput" placeholder="Từ khóa" data-role="tagsinput" />
                             </div>
 							<div class="text-center"><button type="submit" class="btn btn-theme btn-block btn-md" name="submit">Thêm bài viết</button></div>
 						</form>
@@ -53,6 +70,9 @@
                             $content = $_POST["content"];
                             $des = $_POST["des"];
                             $catname = $_POST["category"];
+                            $tinhtp = $_POST["tinhtp"];
+                            $tag = $_POST["tags"];
+                            $t = explode(",", tag);
                             //$target_dir = "uploads/";
                             //$target_file = $target_dir . basename($_FILES["post_image"]["name"]);
                             //echo $_FILES["post_image"]["name"];
@@ -70,11 +90,12 @@
                             //echo $fileName;
                             $filename = $_FILES["post_image"]["tmp_name"];
                             $collection = $db->post;
-                            $document = array( "title" => $title, "content" => $content, "des" => $des, "category" => $catname, "created_date" => new MongoDate(), "author" => "Administrator", "place" => "Can Tho", "post_image" => new MongoBinData(file_get_contents($filename)));
+                            $document = array( "title" => $title, "content" => $content, "des" => $des, "category" => $catname, "created_date" => new MongoDate(), "author" => "Administrator", "place" => $tinhtp,"tags"=>$t,"view"=>"1","like"=>"0", "post_image" => new MongoBinData(file_get_contents($filename)));
                             
                             $collection->insert($document);
                             echo ' <div class="alert alert-success">';
-                            echo '<strong>Success!</strong> Create new post successfully!';
+                            echo 'Thêm bài viết mới thành công!';
+                            echo '</div>';
                         }
                         
                         ?>

@@ -14,9 +14,8 @@
 								<th>#</th>
 								<th>Category Name</th>
 								<th>Descriptions</th>
-								<th>Number Posts</th>
-								<!--<th>Tùy chọn</th>
-								<th>Tùy chọn</th> -->
+								<th>Chỉnh sửa</th>
+								<th>Xóa</th>
 							  </tr>
 							</thead>
 							<tbody>

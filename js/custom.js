@@ -28,6 +28,9 @@ jQuery(document).ready(function($) {
 			height: 300,
 			tabsize: 2
 		  });
+    $('#tagsinput').tagsinput({
+            trimValue: true
+    });
     $("#input-b5").fileinput({showCaption: false});
     
 		$('.accordion').on('show', function (e) {
